@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import CocktailListContainer from './components/CocktailListContainer'
 import { Route } from 'react-router-dom'
+import CocktailImagesContainer from './components/CocktailImagesContainer'
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
         </header>
         <main>
           <Route exact path='/' component={CocktailListContainer}/>
+          <Route path='/cocktails/:cocktail' component={CocktailImagesContainer} />
         </main>
       </div>
     );
